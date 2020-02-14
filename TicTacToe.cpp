@@ -35,6 +35,17 @@ std::string SquareTypeStringify(SquareType sq){
     return Emojify[sq];
 }
 
+void TicTacToe::DisplayBoard(){
+    std::string b;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            b = SquareTypeStringify(this -> get_square_value(Position(i, j)));
+            std::cout << b;
+        }
+        std::cout << std::endl;
+    }
+}
+
 int main(){
     TicTacToe *b = new TicTacToe();
     b -> create_board();
