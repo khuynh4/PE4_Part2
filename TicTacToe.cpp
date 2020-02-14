@@ -10,7 +10,7 @@ SquareType TicTacToe::get_square_value(Position pos) const{
     if((pos.row >= 0 && pos.row <rows_) && (pos.col >= 0 && pos.col < cols_)){
         return arr_[pos.row][pos.col];
     }
-  
+
     return SquareType::Empty;
 }
 
@@ -49,6 +49,6 @@ void TicTacToe::DisplayBoard(){
 int main(){
     TicTacToe *b = new TicTacToe();
     b -> create_board();
-  
+
     return 0;
 }
