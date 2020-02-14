@@ -35,6 +35,8 @@ public:
 
  	void create_board();
 
+ 	void DisplayBoard();
+
 private:
   	SquareType arr_[3][3];
 
