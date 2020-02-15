@@ -34,12 +34,13 @@ public:
 	void set_square_value(Position pos, SquareType value);
 
  	void create_board();
-
- 	void DisplayBoard();
+    
+    void DisplayBoard();
+ 	void PlaceMarker(Position pos, SquareType value);
 
 private:
   	SquareType arr_[3][3];
-
+    int turn;
 	int rows_; // might be convenient but not necessary
 	int cols_;
 };

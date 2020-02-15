@@ -3,6 +3,7 @@
 TicTacToe::TicTacToe(){
     rows_ = this -> get_rows();
     cols_ = this -> get_cols();
+    turn = 0;
     return;
 }
 
@@ -31,7 +32,7 @@ void TicTacToe::create_board(){
 }
 
 std::string SquareTypeStringify(SquareType sq){
-    std::map<SquareType, std::string> Emojify = {{SquareType::Empty, "🗆"}, {SquareType::X, "❌"}, {SquareType::O, "⭕"}};
+    std::map<SquareType, std::string> Emojify = {{SquareType::Empty, " 🗆 "}, {SquareType::X, "❌ "}, {SquareType::O, "⭕ "}};
     return Emojify[sq];
 }
 
@@ -46,9 +47,17 @@ void TicTacToe::DisplayBoard(){
     }
 }
 
+void TicTacToe::PlaceMarker(Position pos, SquareType value){
+    set_square_value(pos, value);
+}
+
 int main(){
     TicTacToe *b = new TicTacToe();
+    SquareType sq = SquareType::X;
     b -> create_board();
+    b -> DisplayBoard();
+    b -> PlaceMarker(Position(0, 1), sq);
+    b -> DisplayBoard();
 
     return 0;
 }
