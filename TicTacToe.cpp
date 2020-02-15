@@ -11,7 +11,7 @@ SquareType TicTacToe::get_square_value(Position pos) const{
     if((pos.row >= 0 && pos.row <rows_) && (pos.col >= 0 && pos.col < cols_)){
         return arr_[pos.row][pos.col];
     }
-  
+
     return SquareType::Empty;
 }
 
@@ -32,16 +32,21 @@ void TicTacToe::create_board(){
 }
 
 std::string SquareTypeStringify(SquareType sq){
-    std::map<SquareType, std::string> Emojify = {{SquareType::Empty, "🗆"}, {SquareType::X, "❌"}, {SquareType::O, "⭕"}};
+    std::map<SquareType, std::string> Emojify = {{SquareType::Empty, " 🗆 "}, {SquareType::X, "❌ "}, {SquareType::O, "⭕ "}};
     return Emojify[sq];
 }
 
 void TicTacToe::DisplayBoard(){
-    for (int i = 0; i < 3; i++){
-        for(int j = 0; j < 3; j++)
-            std::cout << SquareTypeStringify(this -> get_square_value(Position(i,j)));
+    std::string b;
+    for(int i = 0; i < 3; i++){
+        for(int j = 0; j < 3; j++){
+            b = SquareTypeStringify(this -> get_square_value(Position(i, j)));
+            std::cout << b;
+        }
+        std::cout << std::endl;
     }
 }
+
 
 Position TicTacToe::GetPlayarChoice(){
     int row = 1;
@@ -106,12 +111,17 @@ Position TicTacToe::GetPlayarChoice(){
     std::cin >> location;
     turn++;
     return location;
+
+void TicTacToe::PlaceMarker(Position pos, SquareType value){
+    set_square_value(pos, value);
 }
 
 int main(){
     TicTacToe *b = new TicTacToe();
+    SquareType sq = SquareType::X;
     b -> create_board();
-    
-  
+    b -> DisplayBoard();
+    b -> PlaceMarker(Position(0, 1), sq);
+    b -> DisplayBoard();
     return 0;
 }
