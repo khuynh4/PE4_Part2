@@ -1,0 +1,34 @@
+./a.out
+ 🗆  🗆  🗆 
+  🗆  🗆  🗆 
+   🗆  🗆  🗆 
+   Select the Square you wish to mark
+   mm
+    🗆  🗆  🗆 
+     🗆 ❌  🗆 
+      🗆  🗆  🗆 
+      Select the Square you wish to mark
+      tl
+      ⭕  🗆  🗆 
+       🗆 ❌  🗆 
+        🗆  🗆  🗆 
+	Select the Square you wish to mark
+	tm
+	⭕ ❌  🗆 
+	 🗆 ❌  🗆 
+	  🗆  🗆  🗆 
+	  Select the Square you wish to mark
+	  bm
+	  ⭕ ❌  🗆 
+	   🗆 ❌  🗆 
+	    🗆 ⭕  🗆 
+	    Select the Square you wish to mark
+	    ml
+	    ⭕ ❌  🗆 
+	    ❌ ❌  🗆 
+	     🗆 ⭕  🗆 
+	     Select the Square you wish to mark
+	     mr
+	     ⭕ ❌  🗆 
+	     ❌ ❌ ⭕
+	      🗆 ⭕  🗆 
