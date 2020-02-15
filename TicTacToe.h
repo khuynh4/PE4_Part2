@@ -36,6 +36,7 @@ public:
  	void create_board();
     
     void DisplayBoard();
+    Position GetPlayerChoice();
  	void PlaceMarker(Position pos, SquareType value);
 
 private:
